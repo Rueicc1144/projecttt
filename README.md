@@ -14,4 +14,8 @@
 ```
 </idiv><idiv>
 ```
-不影響注音的標註，可以簡化程式碼可閱讀性
+不影響注音的標註，只剩下
+```
+<div><ruby>意<rt>ㄧˋ</rt></ruby><ruby>見<rt>ㄐㄧㄢˋ</rt></ruby><ruby>回<rt>ㄏㄨㄟˊ</rt></ruby><ruby>饋<rt>ㄎㄨㄟˋ</rt></ruby></div>
+```
+可以簡化程式碼可閱讀性

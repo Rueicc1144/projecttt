@@ -1,5 +1,5 @@
 ## 注音標示簡易說明
-[此網站](<(https://www.cmex.org.tw/phon/)>) 可以協助標示注音，提供標註後的程式碼
+[此網站](<https://www.cmex.org.tw/phon/>) 可以協助標示注音，提供標註後的程式碼
 正常轉換後輸出程式碼如下
 ```
 <link type="text/css" rel="stylesheet" href="http://www.cmex.org.tw/phon/phon.css" charset="utf8">

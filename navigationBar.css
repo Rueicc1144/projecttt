@@ -1,6 +1,25 @@
+@font-face { 
+    font-family: BopomofoRuby;
+    src: url(BopomofoRuby1909-v1-Regular.ttf);
+}
+
 body{
     margin: 0;
     background-color: #fff9f2 !important;
+    font-family: BopomofoRuby, serif;
+}
+
+ruby>rt{
+    display: ruby-text;
+}
+
+rt{
+    font-family: BopomofoRuby;
+    font-size: 23%;
+    ruby-align: center;
+    text-align: center;
+    text-orientation: upright;
+    letter-spacing: 0;
 }
 
 /* 內容樣式 */
@@ -14,7 +33,7 @@ body{
     width: 100%;
     justify-content: center;
     align-items: center;
-    margin-top: 100px !important;
+    margin-top: 105px !important;
     margin-left: 250px;
     padding-left: 30px;
     

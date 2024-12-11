@@ -15,7 +15,7 @@ ruby>rt{
 
 rt{
     font-family: BopomofoRuby;
-    font-size: 23%;
+    font-size: 25%;
     ruby-align: center;
     text-align: center;
     text-orientation: upright;
@@ -24,7 +24,7 @@ rt{
 
 /* 內容樣式 */
 .content {
-    flex: 1; /* 確保內容區域填滿剩餘空間 */
+    flex: 1; 
     display: flex;
     justify-content: center;
 }
@@ -33,24 +33,25 @@ rt{
     width: 100%;
     justify-content: center;
     align-items: center;
-    margin-top: 105px !important;
+    margin-top: 110px !important;
     margin-left: 250px;
     padding-left: 30px;
-    
+    padding-right: 30px;
 }
 
 .title{
     text-align: left;
-    color: #343434;
+    color: #202f5a;
     font-size: 2.5rem;    
     font-weight: 600 ;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 
 nav{
     display: flex;
     align-items: center;
+    z-index: 1200;
 }
 
 /* 導覽列部分 */

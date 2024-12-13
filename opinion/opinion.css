@@ -4,6 +4,10 @@
     color: #202f5a;
 }
 
+form{
+    margin-left: 20px;
+}
+
 .radio-group {
     display: flex;
     justify-content: space-between;

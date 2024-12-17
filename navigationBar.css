@@ -143,3 +143,47 @@ nav{
     height: 70px;
     width: 70px;
 }
+
+.userphoto:hover{
+    cursor: pointer;
+}
+
+.user {
+    height: 100px;
+    width: 250px;
+    position: fixed;
+    top: 100px;
+    right: -250px; /* 預設隱藏在右邊 */
+    background-color: #dbe8e8;
+    border: solid 1px gray;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.user.active {
+    right: 0; /* 顯示出來 */
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.user .option{
+    text-decoration: none;
+    font-size: 22px;
+    color: #35446d;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+    font-weight: 900; 
+    padding: 10px 0; 
+}
+
+.user .option:hover {
+    background-color: #bdd4d4; 
+}
+
+.user .r{
+    text-align: end;
+    padding-right: 30px;
+}

@@ -18,7 +18,7 @@
             <div id="mySidebar" class="sidebar">
                 <a class="option" href="">人體結構</a>
                 <a class="option" href="">腦力激盪</a>
-                <a class="option" href="">互動遊戲</a>
+                <a class="option" href="/game/game-choice.html">互動遊戲</a>
                 <a class="option" href="/units_score/units-score.html">單元成績</a>
                 <a class="option" href="/overview_score/overview-score.html">成績總覽</a>
                 <a class="option" href="/award/award.html">成就獎勵</a>
@@ -32,15 +32,18 @@
 
 
         <div class="logo-placeholder">
-            <a href="#" class="logo">
+            <a href="/home/home.html" class="logo">
                 <img class="logo" src="/assets/img/logo.png" alt="logo">
             </a>
         </div>
         
         <div class="user-placeholder">
-            <a href="#" class="logo">
-                <img class="userphoto" src="/assets/img/userPhoto.jpg" alt="logo">
-            </a>
+            <img class="userphoto" src="/assets/img/userPhoto.jpg" alt="user" onclick="toggleUserMenu()">
+
+            <div id="myuser" class="user">
+                <a href="/user/user.html" class="option">使用者資料</a>
+                <a href="/index.html" class="option r">登出</a>
+            </div>
         </div>
     </nav>
 
@@ -76,13 +79,21 @@
         </div>
      </div>
 
-    <script>
+     <script>
         const burgerMenu = document.querySelector('.bergerMenu');
         const sidebar = document.getElementById('mySidebar');
 
         burgerMenu.addEventListener('click', () => {
             sidebar.classList.toggle('active');
         });
+
+        // 開關使用者選單的函式
+        function toggleUserMenu() {
+            // 獲取 id="myuser" 的元素
+            var userMenu = document.getElementById("myuser");
+            // 切換 'active' class，控制顯示或隱藏
+            userMenu.classList.toggle("active");
+        }
     </script>
 
     <script>

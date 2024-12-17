@@ -17,7 +17,7 @@
             <div id="mySidebar" class="sidebar">
                 <a class="option" href="">人體結構</a>
                 <a class="option" href="">腦力激盪</a>
-                <a class="option" href="">互動遊戲</a>
+                <a class="option" href="/game/game-choice.html">互動遊戲</a>
                 <a class="option" href="/units_score/units-score.html">單元成績</a>
                 <a class="option" href="/overview_score/overview-score.html">成績總覽</a>
                 <a class="option" href="/award/award.html">成就獎勵</a>
@@ -31,15 +31,18 @@
 
 
         <div class="logo-placeholder">
-            <a href="#" class="logo">
+            <a href="/home/home.html" class="logo">
                 <img class="logo" src="/assets/img/logo.png" alt="logo">
             </a>
         </div>
         
         <div class="user-placeholder">
-            <a href="#" class="logo">
-                <img class="userphoto" src="/assets/img/userPhoto.jpg" alt="logo">
-            </a>
+            <img class="userphoto" src="/assets/img/userPhoto.jpg" alt="user" onclick="toggleUserMenu()">
+
+            <div id="myuser" class="user">
+                <a href="/user/user.html" class="option">使用者資料</a>
+                <a href="/index.html" class="option r">登出</a>
+            </div>
         </div>
     </nav>
 
@@ -59,7 +62,7 @@
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="organ-block">
                                     <div class="organ-pic">
-                                        <img src="/assets/organs/images.jpeg" class="organ">
+                                        <img src="/Image/Image/Large intestine.png" class="organ">
                                     </div>
                                     <div class="rating">
                                         <input value="5" name="rate1" id="star15" type="radio">
@@ -78,8 +81,8 @@
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="organ-block">
                                     <div class="organ-pic">
-                                        <img src="/assets/organs/images.jpeg" class="organ">
-                                        <img src="/assets/organs/medal.png" alt="Medal" class="medal">
+                                        <img src="/Image/Image/Lung.png" class="organ">
+                                        <img src="/Image/Image/Badge.png" alt="Medal" class="medal">
                                     </div>
                                     <div class="rating">
                                         <input value="5" name="rate2" id="star25" type="radio">
@@ -98,8 +101,8 @@
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="organ-block">
                                     <div class="organ-pic">
-                                        <img src="/assets/organs/images.jpeg" class="organ">
-                                        <img src="/assets/organs/medal.png" alt="Medal" class="medal">
+                                        <img src="/Image/Image/Heart.png" class="organ">
+                                        <img src="/Image/Image/Badge.png" alt="Medal" class="medal">
                                     </div>
                                     <div class="rating">
                                         <input value="5" name="rate3" id="star35" type="radio" checked="">
@@ -118,7 +121,7 @@
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="organ-block">
                                     <div class="organ-pic">
-                                        <img src="/assets/organs/images.jpeg" class="organ">
+                                        <img src="/Image/Image/Small intestine.png" class="organ">
                                     </div>
                                     <div class="rating">
                                         <input value="5" name="rate4" id="star45" type="radio">
@@ -137,8 +140,8 @@
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="organ-block">
                                     <div class="organ-pic">
-                                        <img src="/assets/organs/images.jpeg" class="organ">
-                                        <img src="/assets/organs/medal.png" alt="Medal" class="medal">
+                                        <img src="/Image/Image/Liver.png" class="organ">
+                                        <img src="/Image/Image/Badge.png" alt="Medal" class="medal">
                                     </div>
                                     <div class="rating">
                                         <input value="5" name="rate5" id="star55" type="radio">
@@ -157,7 +160,7 @@
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="organ-block">
                                     <div class="organ-pic">
-                                        <img src="/assets/organs/images.jpeg" class="organ">
+                                        <img src="/Image/Image/Stomach.png" class="organ">
                                     </div>
                                     <div class="rating">
                                         <input value="5" name="rate6" id="star65" type="radio">
@@ -189,8 +192,8 @@
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="organ-block">
                                     <div class="organ-pic">
-                                        <img src="/assets/organs/images.jpeg"  class="organ">
-                                        <img src="/assets/organs/medal.png" alt="Medal" class="medal">
+                                        <img src="/Image/Image/body_puzzle.png"  class="organ">
+                                        <img src="/Image/Image/Badge.png" alt="Medal" class="medal">
                                     </div>
                                     <div class="rating">
                                         <input value="5" name="rate7" id="star75" type="radio"  checked="">
@@ -209,7 +212,7 @@
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="organ-block">
                                     <div class="organ-pic">
-                                        <img src="/assets/organs/images.jpeg" class="organ">
+                                        <img src="/Image/Image/parkour.png" class="organ">
                                     </div>
                                     <div class="rating">
                                         <input value="5" name="rate8" id="star85" type="radio">
@@ -228,7 +231,7 @@
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="organ-block">
                                     <div class="organ-pic">
-                                        <img src="/assets/organs/images.jpeg" class="organ">
+                                        <img src="/Image/Image/defense_war.png" class="organ">
                                     </div>
                                     <div class="rating">
                                         <input value="5" name="rate9" id="star95" type="radio">
@@ -247,7 +250,7 @@
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="organ-block">
                                     <div class="organ-pic">
-                                        <img src="/assets/organs/images.jpeg" class="organ">
+                                        <img src="/Image/Image/monopoly.png" class="organ">
                                     </div>
                                     <div class="rating">
                                         <input value="5" name="rate10" id="star105" type="radio">
@@ -272,13 +275,21 @@
      </div>
 
     
-    <script>
+     <script>
         const burgerMenu = document.querySelector('.bergerMenu');
         const sidebar = document.getElementById('mySidebar');
 
         burgerMenu.addEventListener('click', () => {
             sidebar.classList.toggle('active');
         });
+
+        // 開關使用者選單的函式
+        function toggleUserMenu() {
+            // 獲取 id="myuser" 的元素
+            var userMenu = document.getElementById("myuser");
+            // 切換 'active' class，控制顯示或隱藏
+            userMenu.classList.toggle("active");
+        }
     </script>
 
     <script>

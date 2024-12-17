@@ -104,9 +104,6 @@ textarea:focus{
 }
 
 .submit:hover{
+    border: solid 1px;
     background-color: #dbe8e8;
-}
-
-.submit:focus{
-    outline: 0 !important;
 }

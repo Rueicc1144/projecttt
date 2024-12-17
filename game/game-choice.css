@@ -1,0 +1,41 @@
+.unit-container{
+    display: block;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.unit-container a{
+    text-decoration: none;
+}
+
+.bg {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: #bdd4d4;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.bg:hover{
+    height: 210px;
+    width: 210px;
+    cursor: pointer;
+}
+
+.game-choice{
+    height: 120px;
+}
+
+.game-title{
+    font-size: 30px;
+    font-weight: 600;
+    color: #4b4d77;
+    margin-top: 20px;
+    width: 200px;
+    text-align: center;
+}

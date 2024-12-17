@@ -17,25 +17,26 @@
 
 .organ-pic{
     position: relative;
-    background-color: aliceblue;
+    background-color: #dbe8e8;
     width: 150px;
     height: 150px;
     border-radius: 50%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
 }
 
 .organ-block .organ{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 60%;
+    
 }
 /* 獎章 */
 .medal {
     position: absolute;
-    right: -20px;
-    width: 70px; 
-    height: 70px; 
+    top: -10px;
+    right: -30px;
+    width: 100px; 
+   
 }
 
 /* 星星 */

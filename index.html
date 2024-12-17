@@ -1,71 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="navigationBar.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <title>login</title>
-
+    <meta charset="utf-8">
+    <title>自然列車</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <nav class="header">
-        <div class="burgerMenu-placeholder">
-            <img class="bergerMenu" src="./assets/img/menu.png" alt="bergerMenu" onclick="openNav()">
-            
-            <div id="mySidebar" class="sidebar">
-                <a class="option" href="">人體結構</a>
-                <a class="option" href="">腦力激盪</a>
-                <a class="option" href="">互動遊戲</a>
-                <a class="option" href="/units_score/units-score.html">單元成績</a>
-                <a class="option" href="/overview_score/overview-score.html">成績總覽</a>
-                <a class="option" href="/award/award.html">成就獎勵</a>
-
-                <div class="other-options">
-                    <a href="/opinion/opinion.html" class="other-option">意見回饋</a>
-                    <a href="" class="other-option">關於我們</a>
+    <div class="container">
+        <div class="login">
+            <h2>登入</h2>
+            <form>
+                <div class="input">
+                    <label for="account"></label>
+                    <input type="text" id="account" name="account" placeholder="電子郵件 / 使用者名稱"><br/>
+                    <label for="password"></label>
+                    <input type="password" id="password" name="password" placeholder="密碼"><br>
+                    <button type="submit" class="submit" onclick="check(event)">啟動列車</button>
                 </div>
+
+                    <a href="register.html" class="register">還沒有帳號？快來買張票！</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="forget.html" class="forgot-password">忘記密碼</a>
+                </form>
+        </div>
+        <div class="right">
+            <h1>自然列車</h1>
+            <p>從小學習自然，未來無限！</p>
+            <div class="train-image">
+                <img src="/Image/Image/Train.png" alt="火車圖片">
+            </div>
+            <div class="rail">
+                
             </div>
         </div>
+    </div>
 
+    <div class="overlay" id="overlay" onclick="hideAlert()"></div>
+    <div class="custom-alert" id="customAlert">訊息內容</div>
 
-        <div class="logo-placeholder">
-            <a href="#" class="logo">
-                <img class="logo" src="./assets/img/logo.png" alt="logo">
-            </a>
-        </div>
-        
-        <div class="user-placeholder">
-            <a href="#" class="logo">
-                <img class="userphoto" src="./assets/img/userPhoto.jpg" alt="logo">
-            </a>
-        </div>
-    </nav>
-
-
-    <div class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="main-content">
-                    <div class="title">
-                            
-                    </div>
-                    
-                    
-                </div>
-            </div>
-        </div>
-     </div>
-
-    
     <script>
-        const burgerMenu = document.querySelector('.bergerMenu');
-        const sidebar = document.getElementById('mySidebar');
+        function check(event) {
+            event.preventDefault(); // 阻止表單提交刷新頁面
 
-        burgerMenu.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-        });
+            // 獲取使用者輸入的帳號和密碼
+            const account = document.getElementById("account").value;
+            const password = document.getElementById("password").value;
+
+            // 檢查帳號和密碼是否正確
+            if (account == "12345" && password == "12345") {
+                showAlert("登入成功");
+            } else {
+                showAlert("帳號或密碼錯誤");
+            }
+        }
+
+        function showAlert(message) {
+            // 顯示自訂的 alert
+            const alertBox = document.getElementById("customAlert");
+            const overlay = document.getElementById("overlay");
+
+            alertBox.textContent = message; // 設定訊息內容
+            alertBox.style.display = "block"; // 顯示 alert
+            overlay.style.display = "block"; // 顯示背景遮罩
+        }
+
+        function hideAlert() {
+            // 隱藏自訂的 alert 和背景遮罩
+            const alertBox = document.getElementById("customAlert");
+            const overlay = document.getElementById("overlay");
+
+            if (alertBox.textContent === "登入成功") {
+                window.location.href = "/home/home.html"; // 跳轉到首頁
+            }
+
+            alertBox.style.display = "none";
+            overlay.style.display = "none";
+        }
+
+
+
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 </html>

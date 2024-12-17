@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="forget.css">
+    <title>重設密碼</title>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+
+        </div>
+        <div class="inner">
+            <h1>重設密碼</h1>
+            <h3>請輸入您的電子郵件，並點選發送驗證碼</h3>
+            <div class="input">
+                <label for="email"></label>
+                電子郵件：&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" id="email" name="email">
+                <button type="submit" class="sent">發送驗證碼</button><br/>
+                <label for="pin"></label>
+                驗證碼：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="pin" name="pin"><br/>
+                <label for="pwd"></label>
+                新密碼設定：<input type="password" id="pwd" name="pwd"><br/>
+                <label for="checkpwd"></label>
+                新密碼確認：<input type="password" id="checkpwd" name="checkpwd"><br/>
+                <button type="submit" class="submit" onclick="check(event)">確認修改</button>
+            </div>
+            <a href="start.html" class="start">回首頁</a>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="hideAlert()"></div>
+    <div class="custom-alert" id="customAlert">訊息內容</div>
+
+    <script>
+        function check(event) {
+                event.preventDefault(); // 阻止表單提交刷新頁面
+                const pin = document.getElementById("pin").value;
+                if (pin =="123456") {
+                    showAlert("修改密碼成功");
+                } else {
+                    showAlert("驗證碼輸入錯誤");
+                }
+            }
+
+            function showAlert(message) {
+               // 顯示自訂的 alert
+               const alertBox = document.getElementById("customAlert");
+               const overlay = document.getElementById("overlay");
+
+               alertBox.textContent = message; // 設定訊息內容
+               alertBox.style.display = "block"; // 顯示 alert
+               overlay.style.display = "block"; // 顯示背景遮罩
+           }
+
+
+           function hideAlert() {
+              
+               const alertBox = document.getElementById("customAlert");
+               const overlay = document.getElementById("overlay");
+
+               if (alertBox.textContent == "修改密碼成功") {
+                   window.location.href = "index.html"; 
+               }
+
+               alertBox.style.display = "none";
+               overlay.style.display = "none";
+            }
+        
+    </script>
+
+        
+</body>
+</html>

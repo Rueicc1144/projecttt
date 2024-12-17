@@ -37,11 +37,10 @@
 }
 
 .organ{
-    height: 130px;
-    width: 130px;
-    border-radius: 50%;
+    height: 100px;
+    width: 100px;
     position: absolute;
-    top: 10px
+    top: 30px
 }
 
 .score{

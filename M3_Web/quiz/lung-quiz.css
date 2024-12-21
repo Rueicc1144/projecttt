@@ -1,0 +1,85 @@
+/* 題目內容樣式 */
+#quiz-container {
+    position: relative;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.question {
+    color: #202f5a;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    text-justify: center;
+}
+
+.question-image{
+    position: absolute;
+    left: 30%;
+    width: 10%;
+}
+
+.question-image img {
+    width: 100%;
+    display: block;
+    
+}
+
+.options div {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    justify-content:center;
+}
+
+.navigation-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    
+}
+
+.navigation-buttons button {
+    flex: 1;
+    margin: 10px 50px;
+    padding: 10px 0;
+    color: #202f5a;
+    font-weight: 600;
+    border-radius: 10px;
+    border: solid 2px rgb(190, 190, 190);
+}
+
+.exit-button{
+    background-color: aliceblue; 
+}
+
+.exit-button:hover{
+    background-color: rgb(214, 235, 253);
+}
+
+.prev-button{
+    background-color: aliceblue;
+}
+
+.prev-button:hover{
+    background-color: #abdfec;
+}
+
+.next-button{
+    background-color: #dbe8e8;
+}
+
+
+.next-button:hover{
+    background-color: #bdd4d4;
+}

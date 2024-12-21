@@ -1,0 +1,95 @@
+.block-name{
+    text-align: left;
+    color: #202f5a;
+    font-size: 2rem;    
+    font-weight: 600 ;
+    margin-bottom: 20px;
+}
+
+.organ-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平居中 */
+    text-align: center;
+    width: 100%px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.organ-pic{
+    position: relative;
+    background-color: #dbe8e8;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.organ-block .organ{
+    width: 60%;
+    
+}
+/* 獎章 */
+.medal {
+    position: absolute;
+    top: -10px;
+    right: -30px;
+    width: 100px; 
+   
+}
+
+@keyframes breathing {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+}
+
+img.medal {
+  animation: breathing 2s infinite ease-in-out;
+}
+
+/* 星星 */
+/* From Uiverse.io by andrew-demchenk0 */ 
+.rating:not(:checked) > input {
+    position: absolute;
+    appearance: none;
+  }
+  
+  .rating:not(:checked) > label {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    color: #b7b7b7;
+  }
+  
+  .rating:not(:checked) > label:before {
+    content: '★';
+  }
+  
+  .rating > input:checked + label:hover,
+  .rating > input:checked + label:hover ~ label,
+  .rating > input:checked ~ label:hover,
+  .rating > input:checked ~ label:hover ~ label,
+  .rating > label:hover ~ input:checked ~ label {
+    color: #edc036;
+  }
+  
+  .rating:not(:checked) > label:hover,
+  .rating:not(:checked) > label:hover ~ label {
+    color: #ffce38;
+  }
+  
+  .rating > input:checked ~ label {
+    color: #ffce38;
+  }
+  
+.middle{
+  width: 30px !important ;
+}
+  
+  

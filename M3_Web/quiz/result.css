@@ -1,0 +1,99 @@
+/*結果內容*/
+.result-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+    margin-top: 20px;
+}
+
+.result-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.score {
+    font-size: 6rem;
+    color: #35446d;
+    font-weight: bold;
+}
+
+.accuracy-circle {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    display: inline-block;
+}
+
+.accuracy-circle svg {
+    transform: rotate(-90deg);
+}
+
+.accuracy-circle circle {
+    fill: none;
+    stroke-width: 10;
+}
+
+.accuracy-background {
+    stroke: #e6e6e6;
+}
+
+.accuracy-progress {
+    stroke: #35446d;
+    stroke-dasharray: 251.2;
+    stroke-dashoffset: 50.24;
+}
+
+.accuracy-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #35446d;
+    font-weight: bold;
+}
+
+.achievement{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #dbe8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.achievement-icon  {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.medal{
+    position: relative;
+    width: 60px;
+}
+
+.review-button {
+    text-align: right;
+    padding: 20px 50px;
+}
+
+.review-btn {
+    background-color: #e8f1f1;
+    color: #35446d;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.section-title {
+    color: #35446d;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}

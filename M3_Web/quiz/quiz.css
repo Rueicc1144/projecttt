@@ -1,0 +1,49 @@
+.block-name{
+    text-align: left;
+    color: #202f5a;
+    font-size: 2rem;    
+    font-weight: 600 ;
+}
+
+.organ-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平居中 */
+    text-align: center;
+    margin-bottom: 40px;
+    width: 150px;
+}
+
+.organ-pic{
+    position: relative;
+    background-color: rgb(229, 227, 227);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.organ-block .organ{
+    width:150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.organ-pic:hover {
+  transform: scale(1.3);
+  opacity: 1;
+}  
+
+.organ-title{
+  text-align: center;
+  color: #343434;
+  font-size: 1.8rem;    
+  font-weight: 600 ;
+  margin-top: 20px;
+}
+
+.organ-link {
+  display: block;
+  text-decoration: none; /* 去除預設下劃線 */
+  color: inherit; /* 保留字體顏色 */
+}

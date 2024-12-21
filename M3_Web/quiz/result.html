@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/navigationBar.css">
+    <link rel="stylesheet" href="result.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>測驗結果</title>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <nav class="header">
+        <div class="burgerMenu-placeholder">
+            <img class="bergerMenu" src="/assets/img/menu.png" alt="bergerMenu" onclick="openNav()">
+            
+            <div id="mySidebar" class="sidebar">
+                <a class="option" href="/body-structure/body-structure.html">人體結構</a>
+                <a class="option" href="/quiz/quiz.html">腦力激盪</a>
+                <a class="option" href="/game/game-choice.html">互動遊戲</a>
+                <a class="option" href="/units_score/units-score.html">單元成績</a>
+                <a class="option" href="/overview_score/overview-score.html">成績總覽</a>
+                <a class="option" href="/award/award.html">成就獎勵</a>
+
+                <div class="other-options">
+                    <a href="/opinion/opinion.html" class="other-option">意見回饋</a>
+                    <a href="" class="other-option">關於我們</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="logo-placeholder">
+            <a href="/home/home.html" class="logo">
+                <img class="logo" src="/assets/img/logo.png" alt="logo">
+            </a>
+        </div>
+        
+        <div class="user-placeholder">
+            <img class="userphoto" src="/assets/img/tantan.jpg" alt="user" onclick="toggleUserMenu()">
+
+            <div id="myuser" class="user">
+                <a href="/user/user.html" class="option">使用者資料</a>
+                <a href="/index.html" class="option r">登出</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 測驗結果 -->
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="main-content">
+                    <div class="title">
+                        <span><ruby>測<rt>ㄘㄜˋ</rt></ruby><ruby>驗<rt>ㄧㄢˋ</rt></ruby><ruby>結<rt>ㄐㄧㄝˊ</rt></ruby><ruby>果<rt>ㄍㄨㄛˇ</rt></ruby></span>
+                    </div>
+                    
+                    <div class="result-container">
+                        <div class="result-section">
+                            <div class="section-title">你的得分</div>
+                            <div class="score">66</div>
+                        </div>
+
+                        <div class="result-section">
+                            <div class="section-title">答題正確率</div>
+                            <div class="accuracy-circle">
+                                <svg width="150" height="150" viewBox="0 0 150 150">
+                                    <circle class="accuracy-background" cx="75" cy="75" r="70"/>
+                                    <circle class="accuracy-progress" cx="75" cy="75" r="70"/>
+                                </svg>
+                                <div class="accuracy-text">66%</div>
+                            </div>
+                        </div>
+
+                        <div class="result-section">
+                            <div class="section-title">成就解鎖</div>
+                            <div class="achievement">
+                                <img src="/Image/Image/Lung.png" class="achievement-icon" alt="成就圖標">
+                                <!-- <img src="/Image/Image/Badge.png" alt="" class="medal"> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-button">
+                        <a href="/quiz/check.html">
+                            <button class="review-btn">錯誤查看 →</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 側欄功能 -->
+    <script>
+        const burgerMenu = document.querySelector('.bergerMenu');
+        const sidebar = document.getElementById('mySidebar');
+
+        burgerMenu.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        // 開關使用者選單的函式
+        function toggleUserMenu() {
+            // 獲取 id="myuser" 的元素
+            var userMenu = document.getElementById("myuser");
+            // 切換 'active' class，控制顯示或隱藏
+            userMenu.classList.toggle("active");
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

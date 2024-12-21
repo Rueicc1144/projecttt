@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/navigationBar.css">
+    <link rel="stylesheet" href="user.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>user</title>
+
+</head>
+<body>
+    <nav class="header">
+        <div class="burgerMenu-placeholder">
+            <img class="bergerMenu" src="/assets/img/menu.png" alt="bergerMenu" onclick="openNav()">
+            
+            <div id="mySidebar" class="sidebar">
+                <a class="option" href="/body-structure/body-structure.html">人體結構</a>
+                <a class="option" href="/quiz/quiz.html">腦力激盪</a>
+                <a class="option" href="/game/game-choice.html">互動遊戲</a>
+                <a class="option" href="/units_score/units-score.html">單元成績</a>
+                <a class="option" href="/overview_score/overview-score.html">成績總覽</a>
+                <a class="option" href="/award/award.html">成就獎勵</a>
+
+                <div class="other-options">
+                    <a href="/opinion/opinion.html" class="other-option">意見回饋</a>
+                    <a href="" class="other-option">關於我們</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="logo-placeholder">
+            <a href="/home/home.html" class="logo">
+                <img class="logo" src="/assets/img/logo.png" alt="logo">
+            </a>
+        </div>
+        
+        <div class="user-placeholder">
+            <img class="userphoto" src="/assets/img/tantan.jpg" alt="user" onclick="toggleUserMenu()">
+
+            <div id="myuser" class="user">
+                <a href="/user/user.html" class="option">使用者資料</a>
+                <a href="/index.html" class="option r">登出</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="content">
+        <div class="main-content">
+            <div class="user-title">
+                乘客資料
+            </div>
+            <div class="container">
+                <span class="login-time"></span>
+                <div class="left-section">
+                    <div class="photo-upload">
+                        <div class="user-icon"></div>
+                    </div>
+                </div>
+                <div class="right-section">
+                    <form>
+                        <div class="form-group">
+                            <label>乘客名稱：</label>
+                            <input type="text" placeholder="Jerry3348" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>乘客生日：</label>
+                            <input type="date">
+                        </div>
+                        <div class="form-group">
+                            <label>手機號碼：</label>
+                            <input type="tel" placeholder="09123456789" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>電子信箱：</label>
+                            <input type="email" placeholder="milestone2@mail.com" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>密　　碼：</label>
+                            <input type="password" placeholder="xxxxxxxx" readonly>
+                            <span class="icon">&#128065;</span>
+                        </div>
+                        <div class="form-group">
+                            <label>密碼確認：</label>
+                            <input type="password" placeholder="xxxxxxxx" readonly>
+                            <span class="icon">&#128065;</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="edit-but">
+                <a href="userEdit.html">修改資料</a>
+            </div>
+        </div>
+     </div>
+
+    
+     <script>
+        const burgerMenu = document.querySelector('.bergerMenu');
+        const sidebar = document.getElementById('mySidebar');
+
+        burgerMenu.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        // 開關使用者選單的函式
+        function toggleUserMenu() {
+            // 獲取 id="myuser" 的元素
+            var userMenu = document.getElementById("myuser");
+            // 切換 'active' class，控制顯示或隱藏
+            userMenu.classList.toggle("active");
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

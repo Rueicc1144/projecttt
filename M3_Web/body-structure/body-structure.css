@@ -1,0 +1,169 @@
+/* 人體展示 */
+/* Body Container */
+.body-container {
+  margin-left: 100px;
+  position: relative;
+  width: 42%;
+}
+
+/* Human Body Image: 基底圖層 */
+.body-image {
+  width: 110%;
+  display: block;
+}
+
+/* Organ Images: 絕對定位並根據比例調整 */
+.organ-img {
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.85;
+}
+
+.organ-img:hover {
+  transform: scale(1.3);
+  opacity: 1;
+}
+
+/* 各器官的定位調整（以人體圖片為基準） */
+.lung {
+  top: 15%;
+  left: 40%;
+  width: 30%;
+}
+
+.heart {
+  top: 32%;
+  left: 49%;
+  width: 13%;
+}
+
+.liver {
+  top: 48%;
+  left: 40%;
+  width: 23%;
+}
+
+.stomach {
+  top: 46%;
+  left: 53%;
+  width: 15%;
+}
+
+.large-intestine {
+  top: 60%;
+  left: 40%;
+  width: 30%;
+}
+
+.small-intestine {
+  top: 69%;
+  left: 47%;
+  width: 15%;
+
+}
+
+
+/* Info Panel */
+.info-panel {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  z-index: 1000;
+}
+
+.info-panel .card {
+  height: 100%;
+  background-color: #dbe8e8;
+  border: solid 1px gray  ;
+  border-radius: 20px;
+
+}
+
+.info-panel .card-body {
+  padding: 10px 1.5rem;
+}
+
+.card-header{
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  background-color: #dbe8e800;
+}
+
+.info-panel .card-title {
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #202f5a;
+  margin: 0 !important  ;
+}
+
+.fa-regular {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #202f5a;
+}
+
+.fa-regular:hover {
+  color: #007bff;
+}
+
+.line{
+  width: 100%;
+  border: solid 1px rgb(161, 161, 161);
+}
+
+/* 內容 */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.info-panel .card-text {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.card-text{
+  font-size: 20px !important;
+  color: #202f5a;
+}
+
+.submit{
+  background-color: #f1f1f1;
+  font-size: 18 px;
+  font-weight: 600;
+  border: none;
+  border-radius: 26px;
+  color: #202f5a;
+  padding: 10px 55px;
+  margin: 5px;
+  margin-top: 30px;
+  z-index: 1000; 
+}
+
+.submit:hover{
+  background-color: #a6a6a6a2;
+}
+
+.submit:focus{
+  
+  outline: 0 !important;
+}
+
+.submit{
+  text-decoration: none;
+}
+
+.submit:hover{
+  color: #202f5a;
+}

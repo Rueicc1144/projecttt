@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/navigationBar.css">
+    <link rel="stylesheet" href="award.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>award</title>
+
+</head>
+<body>
+    <nav class="header">
+        <div class="burgerMenu-placeholder">
+            <img class="bergerMenu" src="/assets/img/menu.png" alt="bergerMenu" onclick="openNav()">
+            
+            <div id="mySidebar" class="sidebar">
+                <a class="option" href="/body-structure/body-structure.html">人體結構</a>
+                <a class="option" href="/quiz/quiz.html">腦力激盪</a>
+                <a class="option" href="/game/game-choice.html">互動遊戲</a>
+                <a class="option" href="/units_score/units-score.html">單元成績</a>
+                <a class="option" href="/overview_score/overview-score.html">成績總覽</a>
+                <a class="option" href="/award/award.html">成就獎勵</a>
+
+                <div class="other-options">
+                    <a href="/opinion/opinion.html" class="other-option">意見回饋</a>
+                    <a href="" class="other-option">關於我們</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="logo-placeholder">
+            <a href="/home/home.html" class="logo">
+                <img class="logo" src="/assets/img/logo.png" alt="logo">
+            </a>
+        </div>
+        
+        <div class="user-placeholder">
+            <img class="userphoto" src="/assets/img/tantan.jpg" alt="user" onclick="toggleUserMenu()">
+
+            <div id="myuser" class="user">
+                <a href="/user/user.html" class="option">使用者資料</a>
+                <a href="/index.html" class="option r">登出</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="content">
+        <div class="main-content">
+            <div class="title">
+                <div><ruby>成<rt>ㄔㄥˊ</rt></ruby><ruby>就<rt>ㄐㄧㄡˋ</rt></ruby><ruby>獎<rt>ㄐㄧㄤˇ</rt></ruby><ruby>勵<rt>ㄌㄧˋ</rt></ruby></div>
+            </div>
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="left col-12 col-lg-5">
+                        <div class="block-name">
+                            <ruby>小<rt>ㄒㄧㄠˇ</rt></ruby><ruby>天<rt>ㄊㄧㄢ</rt></ruby><ruby>才<rt>ㄘㄞˊ</rt></ruby>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="organ-block">
+                                    <div class="organ-pic">
+                                        <img src="/Image/Image/Large intestine.png" class="organ">
+                                    </div>
+                                    <div class="rating">
+                                        <input value="5" name="rate1" id="star15" type="radio">
+                                        <label title="text" for="star15"></label>
+                                        <input value="4" name="rate1" id="star14" type="radio">
+                                        <label title="text" for="star14"></label>
+                                        <input value="3" name="rate1" id="star13" type="radio">
+                                        <label title="text" for="star13"></label>
+                                        <input value="2" name="rate1" id="star12" type="radio">
+                                        <label title="text" for="star12"></label>
+                                        <input value="1" name="rate1" id="star11" type="radio">
+                                        <label title="text" for="star11"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="organ-block">
+                                    <div class="organ-pic">
+                                        <img src="/Image/Image/Lung.png" class="organ">
+                                        <img src="/Image/Image/Badge.png" alt="Medal" class="medal">
+                                    </div>
+                                    <div class="rating">
+                                        <input value="5" name="rate2" id="star25" type="radio">
+                                        <label title="text" for="star25"></label>
+                                        <input value="4" name="rate2" id="star24" type="radio">
+                                        <label title="text" for="star24"></label>
+                                        <input value="3" name="rate2" id="star23" type="radio" checked="">
+                                        <label title="text" for="star23"></label>
+                                        <input value="2" name="rate2" id="star22" type="radio">
+                                        <label title="text" for="star22"></label>
+                                        <input value="1" name="rate2" id="star21" type="radio">
+                                        <label title="text" for="star21"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="organ-block">
+                                    <div class="organ-pic">
+                                        <img src="/Image/Image/Heart.png" class="organ">
+                                        <img src="/Image/Image/Badge.png" alt="Medal" class="medal">
+                                    </div>
+                                    <div class="rating">
+                                        <input value="5" name="rate3" id="star35" type="radio" checked="">
+                                        <label title="text" for="star35"></label>
+                                        <input value="4" name="rate3" id="star34" type="radio">
+                                        <label title="text" for="star34"></label>
+                                        <input value="3" name="rate3" id="star33" type="radio">
+                                        <label title="text" for="star33"></label>
+                                        <input value="2" name="rate3" id="star32" type="radio">
+                                        <label title="text" for="star32"></label>
+                                        <input value="1" name="rate3" id="star31" type="radio">
+                                        <label title="text" for="star31"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="organ-block">
+                                    <div class="organ-pic">
+                                        <img src="/Image/Image/Small intestine.png" class="organ">
+                                    </div>
+                                    <div class="rating">
+                                        <input value="5" name="rate4" id="star45" type="radio">
+                                        <label title="text" for="star45"></label>
+                                        <input value="4" name="rate4" id="star44" type="radio">
+                                        <label title="text" for="star44"></label>
+                                        <input value="3" name="rate4" id="star43" type="radio">
+                                        <label title="text" for="star43"></label>
+                                        <input value="2" name="rate4" id="star42" type="radio">
+                                        <label title="text" for="star42"></label>
+                                        <input value="1" name="rate4" id="star41" type="radio">
+                                        <label title="text" for="star41"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="organ-block">
+                                    <div class="organ-pic">
+                                        <img src="/Image/Image/Liver.png" class="organ">
+                                        <img src="/Image/Image/Badge.png" alt="Medal" class="medal">
+                                    </div>
+                                    <div class="rating">
+                                        <input value="5" name="rate5" id="star55" type="radio">
+                                        <label title="text" for="star55"></label>
+                                        <input value="4" name="rate5" id="star54" type="radio">
+                                        <label title="text" for="star54"></label>
+                                        <input value="3" name="rate5" id="star53" type="radio">
+                                        <label title="text" for="star53"></label>
+                                        <input value="2" name="rate5" id="star52" type="radio">
+                                        <label title="text" for="star52"></label>
+                                        <input value="1" name="rate5" id="star51" type="radio" checked="">
+                                        <label title="text" for="star51"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="organ-block">
+                                    <div class="organ-pic">
+                                        <img src="/Image/Image/Stomach.png" class="organ">
+                                    </div>
+                                    <div class="rating">
+                                        <input value="5" name="rate6" id="star65" type="radio">
+                                        <label title="text" for="star65"></label>
+                                        <input value="4" name="rate6" id="star64" type="radio">
+                                        <label title="text" for="star64"></label>
+                                        <input value="3" name="rate6" id="star63" type="radio">
+                                        <label title="text" for="star63"></label>
+                                        <input value="2" name="rate6" id="star62" type="radio">
+                                        <label title="text" for="star62"></label>
+                                        <input value="1" name="rate6" id="star61" type="radio">
+                                        <label title="text" for="star61"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 中間分隔 -->
+                    <div class="middle col-lg-2">
+
+                    </div>
+
+                    <div class="right col-12 col-lg-5">
+                        <div class="block-name">
+                            <ruby>我<rt>ㄜˇ</rt></ruby><ruby>是<rt>ㄕˋ</rt></ruby><ruby>遊<rt>ㄧㄡˊ</rt></ruby><ruby>戲<rt>ㄒㄧˋ</rt></ruby><ruby>王<rt>ㄨㄤˊ</rt></ruby>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="organ-block">
+                                    <div class="organ-pic">
+                                        <img src="/Image/Image/body_puzzle.png"  class="organ">
+                                        <img src="/Image/Image/Badge.png" alt="Medal" class="medal">
+                                    </div>
+                                    <div class="rating">
+                                        <input value="5" name="rate7" id="star75" type="radio"  checked="">
+                                        <label title="text" for="star75"></label>
+                                        <input value="4" name="rate7" id="star74" type="radio">
+                                        <label title="text" for="star74"></label>
+                                        <input value="3" name="rate7" id="star73" type="radio">
+                                        <label title="text" for="star73"></label>
+                                        <input value="2" name="rate7" id="star72" type="radio">
+                                        <label title="text" for="star72"></label>
+                                        <input value="1" name="rate7" id="star71" type="radio">
+                                        <label title="text" for="star71"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="organ-block">
+                                    <div class="organ-pic">
+                                        <img src="/Image/Image/parkour.png" class="organ">
+                                    </div>
+                                    <div class="rating">
+                                        <input value="5" name="rate8" id="star85" type="radio">
+                                        <label title="text" for="star85"></label>
+                                        <input value="4" name="rate8" id="star84" type="radio">
+                                        <label title="text" for="star84"></label>
+                                        <input value="3" name="rate8" id="star83" type="radio">
+                                        <label title="text" for="star83"></label>
+                                        <input value="2" name="rate8" id="star82" type="radio">
+                                        <label title="text" for="star82"></label>
+                                        <input value="1" name="rate8" id="star81" type="radio">
+                                        <label title="text" for="star81"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="organ-block">
+                                    <div class="organ-pic">
+                                        <img src="/Image/Image/defense_war.png" class="organ">
+                                    </div>
+                                    <div class="rating">
+                                        <input value="5" name="rate9" id="star95" type="radio">
+                                        <label title="text" for="star95"></label>
+                                        <input value="4" name="rate9" id="star94" type="radio">
+                                        <label title="text" for="star94"></label>
+                                        <input value="3" name="rate9" id="star93" type="radio">
+                                        <label title="text" for="star93"></label>
+                                        <input value="2" name="rate9" id="star92" type="radio">
+                                        <label title="text" for="star92"></label>
+                                        <input value="1" name="rate9" id="star91" type="radio">
+                                        <label title="text" for="star91"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="organ-block">
+                                    <div class="organ-pic">
+                                        <img src="/Image/Image/monopoly.png" class="organ">
+                                    </div>
+                                    <div class="rating">
+                                        <input value="5" name="rate10" id="star105" type="radio">
+                                        <label title="text" for="star105"></label>
+                                        <input value="4" name="rate10" id="star104" type="radio">
+                                        <label title="text" for="star104"></label>
+                                        <input value="3" name="rate10" id="star103" type="radio">
+                                        <label title="text" for="star103"></label>
+                                        <input value="2" name="rate10" id="star102" type="radio">
+                                        <label title="text" for="star102"></label>
+                                        <input value="1" name="rate10" id="star101" type="radio">
+                                        <label title="text" for="star101"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+     </div>
+
+    
+     <script>
+        const burgerMenu = document.querySelector('.bergerMenu');
+        const sidebar = document.getElementById('mySidebar');
+
+        burgerMenu.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        // 開關使用者選單的函式
+        function toggleUserMenu() {
+            // 獲取 id="myuser" 的元素
+            var userMenu = document.getElementById("myuser");
+            // 切換 'active' class，控制顯示或隱藏
+            userMenu.classList.toggle("active");
+        }
+    </script>
+
+    <script>
+        // 自動為所有 rating 的 id 和 name 添加唯一編號
+        document.addEventListener("DOMContentLoaded", function() {
+            const ratingBlocks = document.querySelectorAll(".rating");
+            let counter = 1; // 計數器
+            
+            ratingBlocks.forEach((ratingBlock) => {
+                const inputs = ratingBlock.querySelectorAll("input[type='radio']");
+                const labels = ratingBlock.querySelectorAll("label");
+                
+                inputs.forEach((input, index) => {
+                    const newId = `star${counter}_${index + 1}`; // 為每個 input 生成唯一 ID
+                    input.id = newId; // 設置 input 的 ID
+                    input.name = `rate_${counter}`; // 設置 input 的 name
+                    labels[index].setAttribute("for", newId); // 設置 label 的 for
+                });
+                
+                counter++; // 遞增計數器
+            });
+        });
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

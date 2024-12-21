@@ -1,0 +1,66 @@
+.unit-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.unit-container a{
+    color: black;
+}
+
+.unit-container a:hover, a:visited, a:link, a:active{
+    color: black ;
+}
+
+
+.bg {
+    height: 200px;
+    width: 200px;
+    border-radius: 30px;
+    background-color: #ececec;
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.bg:hover{
+    background-color: rgb(211, 211, 211);
+}
+
+.dot {
+    height: 33px;
+    width: 33px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.green{
+    background-color: #7ed957;
+}
+
+.yellow{
+    background-color: #ffce38;
+}
+
+.red{
+    background-color: #f20028;
+}
+
+.organ{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 30px
+    
+}
+
+.score{
+    position: absolute;
+    bottom: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}

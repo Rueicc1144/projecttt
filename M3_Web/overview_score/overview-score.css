@@ -1,0 +1,71 @@
+.score-container{
+    height: 350px;
+}
+
+.score-title{
+    background-color: #dbe8e8;
+    color: #202f5a;
+    font-size: 28px;
+    font-weight: bold       ;
+    padding: 5px 15px;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.average{
+    text-align: center;
+    font-size: 160px;
+    color: #dbe8e8;
+    margin-top: 30px;
+    -webkit-text-stroke: 3px #5f8e99; /* 邊線寬度和顏色 */
+}
+
+.chart{
+    margin-top: 50px;
+}
+
+.comment-container {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    width: 100%;             
+}
+
+.comment{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #202f5a;
+    border-radius: 30px;
+    width: 250px;
+    background-color: #5f8e99a1;
+    padding: 10px 15px;
+    margin-top: 80px;
+}
+
+.button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button a{
+    background-color: #ececec;
+    font-size: 25px;
+    font-weight: 600;
+    border: none;
+    border-radius: 26px;
+    color: #202f5a;
+    padding: 10px 55px;
+    margin: 5px;
+    z-index: 1000; 
+}
+
+.button a:hover{
+    background-color: #dbe8e8;
+    color: #202f5a; 
+}
+
+.button a{
+    text-decoration: none;
+    outline: 0 !important;
+}

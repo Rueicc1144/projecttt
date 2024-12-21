@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/navigationBar.css">
+    <link rel="stylesheet" href="lung-quiz.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>login</title>
+
+</head>
+<body>
+
+    <nav class="header">
+        <div class="burgerMenu-placeholder">
+            <img class="bergerMenu" src="/assets/img/menu.png" alt="bergerMenu" onclick="openNav()">
+            
+            <div id="mySidebar" class="sidebar">
+                <a class="option" href="/body-structure/body-structure.html">人體結構</a>
+                <a class="option" href="/quiz/quiz.html">腦力激盪</a>
+                <a class="option" href="/game/game-choice.html">互動遊戲</a>
+                <a class="option" href="/units_score/units-score.html">單元成績</a>
+                <a class="option" href="/overview_score/overview-score.html">成績總覽</a>
+                <a class="option" href="/award/award.html">成就獎勵</a>
+
+                <div class="other-options">
+                    <a href="/opinion/opinion.html" class="other-option">意見回饋</a>
+                    <a href="" class="other-option">關於我們</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="logo-placeholder">
+            <a href="/home/home.html" class="logo">
+                <img class="logo" src="/assets/img/logo.png" alt="logo">
+            </a>
+        </div>
+        
+        <div class="user-placeholder">
+            <img class="userphoto" src="/assets/img/tantan.jpg" alt="user" onclick="toggleUserMenu()">
+
+            <div id="myuser" class="user">
+                <a href="/user/user.html" class="option">使用者資料</a>
+                <a href="/index.html" class="option r">登出</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="main-content">
+                    <div class="title">
+                        <span><ruby>肺<rt>ㄆㄟˋ</rt></ruby><ruby>部<rt>ㄅㄨˋ</rt></ruby><ruby>的<rt>˙ㄉㄜ</rt></ruby><ruby>腦<rt>ㄋㄠˇ</rt></ruby><ruby>力<rt>ㄌㄧˋ</rt></ruby><ruby>激<rt>ㄐㄧ</rt></ruby><ruby>盪<rt>ㄉㄤˋ</rt></ruby></span>
+                    </div>
+                    <div id="quiz-container">
+                        <!-- 題目將由 JavaScript 動態插入 -->
+                    </div>
+                    
+                    <div class="navigation-buttons">
+                        <button id="exit-button" class="exit-button" onclick="exitQuiz()">離開</button>
+                        <button id="prev-button" class="prev-button" onclick="prevQuestion()">上一題</button>
+                        <button id="next-button" class="next-button" onclick="nextQuestion()">下一題</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+     </div>
+
+    <script>
+        // 題目資料
+        const questions = [
+            {
+                question: "Q1 請問左圖中是哪個器官？",
+                image: "/Image/Image/lung.png",
+                options: ["肺", "心臟", "小腸"],
+                correct: 0,
+            },
+            {
+                question: "Q2 請問下列何者為肺？",
+                image: "",
+                options: [
+                    { src: "/Image/Image/lung.png", alt: "肺" },
+                    { src: "/Image/Image/stomach.png", alt: "胃" },
+                    { src: "/Image/Image/small intestine.png", alt: "小腸" },
+                ],
+                correct: 0,
+                type: "image", // 特殊處理圖片選項
+            },
+            {
+                question: "Q3 肺的主要功能是什麼？",
+                image: "",
+                options: ["輸送血液", "氣體交換", "消化食物"],
+                correct: 1,
+            },
+        ];
+
+        let currentQuestionIndex = 0;
+
+        function loadQuestion(index) {
+            const quizContainer = document.getElementById("quiz-container");
+            const questionData = questions[index];
+            
+            // 清空現有內容
+            let optionsHTML = "";
+
+            // 檢查題目類型
+            if (questionData.type === "image") {
+                optionsHTML = questionData.options.map((option, i) => `
+                    <div>
+                        <input type="radio" id="option${i}" name="option" value="${i}">
+                        <label for="option${i}">
+                            <img src="${option.src}" alt="${option.alt}" width="100">
+                        </label>
+                    </div>
+                `).join("");
+            } else {
+                optionsHTML = questionData.options.map((option, i) => `
+                    <div>
+                        <input type="radio" id="option${i}" name="option" value="${i}">
+                        <label for="option${i}">${option}</label>
+                    </div>
+                `).join("");
+            }
+
+            quizContainer.innerHTML = `
+                <div class="question">
+                    <p>${questionData.question}</p>
+                </div>
+                ${questionData.image ? `<div class="question-image"><img src="${questionData.image}" alt="Question Image"></div>` : ""}
+                <div class="options">${optionsHTML}</div>
+            `;
+
+            // 更新「下一題」按鈕狀態
+            const nextButton = document.getElementById("next-button");
+
+            if (index === questions.length - 1) {
+                nextButton.textContent = "結束作答";
+                nextButton.onclick = () => window.location.href = "../quiz/result.html";
+            } else {
+                nextButton.textContent = "下一題";
+                nextButton.onclick = nextQuestion;
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                loadQuestion(currentQuestionIndex);
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion(currentQuestionIndex);
+            }
+        }
+
+        function exitQuiz() {
+            // 離開測驗，回到章節選擇頁
+            window.location.href = "../quiz/quiz.html";
+        }
+
+        // 初始化第一題
+        loadQuestion(currentQuestionIndex);
+
+    </script>
+    <script>
+        const burgerMenu = document.querySelector('.bergerMenu');
+        const sidebar = document.getElementById('mySidebar');
+
+        burgerMenu.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        // 開關使用者選單的函式
+        function toggleUserMenu() {
+            // 獲取 id="myuser" 的元素
+            var userMenu = document.getElementById("myuser");
+            // 切換 'active' class，控制顯示或隱藏
+            userMenu.classList.toggle("active");
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

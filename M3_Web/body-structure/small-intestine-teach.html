@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="teach.css">
+    <link rel="stylesheet" href="/navigationBar.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="http://www.cmex.org.tw/phon/phon.css" charset="utf8">
+    <title>lung-teach</title>
+
+</head>
+<body>
+
+    <nav class="header">
+        <div class="burgerMenu-placeholder">
+            <img class="bergerMenu" src="/assets/img/menu.png" alt="bergerMenu" onclick="openNav()">
+            
+            <div id="mySidebar" class="sidebar">
+                <a class="option" href="/body-structure/body-structure.html">人體結構</a>
+                <a class="option" href="/quiz/quiz.html">腦力激盪</a>
+                <a class="option" href="/game/game-choice.html">互動遊戲</a>
+                <a class="option" href="/units_score/units-score.html">單元成績</a>
+                <a class="option" href="/overview_score/overview-score.html">成績總覽</a>
+                <a class="option" href="/award/award.html">成就獎勵</a>
+
+                <div class="other-options">
+                    <a href="/opinion/opinion.html" class="other-option">意見回饋</a>
+                    <a href="" class="other-option">關於我們</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="logo-placeholder">
+            <a href="/home/home.html" class="logo">
+                <img class="logo" src="/assets/img/logo.png" alt="logo">
+            </a>
+        </div>
+        
+        <div class="user-placeholder">
+            <img class="userphoto" src="/assets/img/tantan.jpg" alt="user" onclick="toggleUserMenu()">
+
+            <div id="myuser" class="user">
+                <a href="/user/user.html" class="option">使用者資料</a>
+                <a href="/index.html" class="option r">登出</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="main-content">
+            <div class="title">
+                <span>這裡是lung-teach<br></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/cwS2mSLFX1g?si=XZSEj49fcvefdfYN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="content">
+        <a href="#" class="submit" onclick="enterCourse()">腦力激盪</a>
+    </div>
+    
+    <script>
+        const burgerMenu = document.querySelector('.bergerMenu');
+        const sidebar = document.getElementById('mySidebar');
+
+        burgerMenu.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        // 開關使用者選單的函式
+        function toggleUserMenu() {
+            // 獲取 id="myuser" 的元素
+            var userMenu = document.getElementById("myuser");
+            // 切換 'active' class，控制顯示或隱藏
+            userMenu.classList.toggle("active");
+        }
+
+        function enterCourse() {
+            window.location.href = `../quiz/quiz.html`;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

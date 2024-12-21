@@ -1,0 +1,36 @@
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* 占據 80% 視窗高度 */
+}
+
+.video-container iframe {
+    width: 60%;
+    height: 93.75%;
+    
+}
+
+.submit{
+    background-color: #ececec;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 28 px;
+    font-weight: 60;
+    border: none;
+    border-radius: 26px;
+    color: #202f5a;
+    padding: 10px 55px;
+    margin-top: 30px;
+    z-index: 50; 
+    width: 180px;
+}
+
+.submit:hover{
+    background-color: rgb(215, 215, 215);
+}
+
+.submit:hover,:visited, :link, :active{
+    color: #202f5a;
+}

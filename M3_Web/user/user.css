@@ -1,0 +1,213 @@
+.user-title{
+    font-size: 50px;
+    font-weight: 600;
+    margin-left: 15%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 350px;  
+}
+.left-section {
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: -90px;
+}
+
+.photo-upload {
+    margin: 0 auto;
+}
+
+.photo-icon {
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #87b7d6;
+}
+
+.user-icon{
+    width: 200px;
+    height: 200px;
+    background-image: url("/assets/img/tantan.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #87b7d6;
+}
+
+.user-icon::before{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    
+}
+
+.photo-icon::before {
+    content: '\1F4F7'; /* 相機符號 */
+    font-size: 48px;
+    color: #87b7d6;
+}
+
+.upload-btn {
+    background-color: #87b7d6;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.upload-btn:hover {
+    background-color: #6aa1bf;
+}
+
+.right-section {
+    padding: 10px 40px 10px;
+    width: 60%;
+    margin-top: -5px;
+}
+
+.register-title {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2a3d53;
+    text-align: center;
+    margin-top: -10px;
+    margin-right: -90px;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+}
+
+form{
+    margin-top: 10px;
+}
+
+label {
+    font-size: 20px;
+    flex: 0 0 120px;
+    font-weight: bold;
+    color: #333;
+}
+
+input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus {
+    border-color: #87b7d6;
+    background-color: #bdd4d4;
+    outline: none;
+}
+
+input[readonly]{
+    color: #272424;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+
+.register-btn {
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #202f5a;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+    border: solid 1px #f0f0f0;
+    margin-right: 130px;
+}
+
+.register-btn:hover {
+    background-color: #202f5a;
+    color: #fff;
+}
+
+
+.icon {
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.edit-but{
+    display: flex;
+    justify-content: center;
+
+}
+
+.edit-but a{
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #202f5a;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+    border: solid 1px #f0f0f0;
+
+}
+
+.edit-but a:hover{
+    background-color: #202f5a;
+    color: #fff;
+}
+
+/* 彈出訊息視窗 */
+.custom-alert {
+    display: none; /* 預設隱藏 */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 20px 40px;
+    background-color: #bdd4d4;
+    color: white;
+    font-size: 18px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+}
+
+.overlay {
+    display: none; /* 預設隱藏 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}

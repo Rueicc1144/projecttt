@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/navigationBar.css">
+    <link rel="stylesheet" href="/game/game1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="http://www.cmex.org.tw/phon/phon.css" charset="utf8">
+    <title>test</title>
+    <style>
+       .timer {
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            font-size: 24px;
+            font-weight: bold;
+            color: #6a8ba7;
+            background-color: rgba(217, 243, 238, 0.9);
+            padding: 10px 15px;
+            border-radius: 10px;
+            z-index: 1000;
+        }
+
+        /* 視窗樣式 */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* 半透明背景 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup {
+            width: 40%; /* 控制視窗寬度 */
+            max-width: 500px;
+            background-color:rgba(197, 229, 223,0.8);;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .popup h2 {
+            color: #3d4d63;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        .popup p {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .popup button {
+            background-color: #6a8ba7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav class="header">
+        <div class="burgerMenu-placeholder">
+            <img class="bergerMenu" src="/assets/img/menu.png" alt="bergerMenu" onclick="openNav()">
+            
+            <div id="mySidebar" class="sidebar">
+                <a class="option" href="/body-structure/body-structure.html">人體結構</a>
+                <a class="option" href="/quiz/quiz.html">腦力激盪</a>
+                <a class="option" href="/game/game-choice.html">互動遊戲</a>
+                <a class="option" href="/units_score/units-score.html">單元成績</a>
+                <a class="option" href="/overview_score/overview-score.html">成績總覽</a>
+                <a class="option" href="/award/award.html">成就獎勵</a>
+
+                <div class="other-options">
+                    <a href="/opinion/opinion.html" class="other-option">意見回饋</a>
+                    <a href="" class="other-option">關於我們</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="logo-placeholder">
+            <a href="/home/home.html" class="logo">
+                <img class="logo" src="/assets/img/logo.png" alt="logo">
+            </a>
+        </div>
+        
+        <div class="user-placeholder">
+            <img class="userphoto" src="/assets/img/tantan.jpg" alt="user" onclick="toggleUserMenu()">
+
+            <div id="myuser" class="user">
+                <a href="/user/user.html" class="option">使用者資料</a>
+                <a href="/index.html" class="option r">登出</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="timer" id="timer">剩餘時間: 03:00</div>
+    <div class="game_region">
+        <table>
+            <tr>
+                <td style="margin: 50%;">
+                    <img src="/Image/Image/Body-Skin1.png"style="width: 500px;margin: 20%;">
+                </td>
+                <td>
+                    <img src="/Image/Image/Heart.png" style="width: 150px;margin-left: 200px;">
+                    <img src="/Image/Image/Liver.png" style="width: 150px;">
+                    <img src="/Image/Image/Lung.png" style="width: 150px;">
+                    <br>
+                    <img src="/Image/Image/Stomach.png" style="width: 150px;margin-left: 200px;">
+                    <img src="/Image/Image/Large intestine.png" style="width: 150px;">
+                    <img src="/Image/Image/Small intestine.png" style="width: 150px;">
+                </td>
+            </tr>
+        </table>  
+    </div>
+    <div style="text-align: center">
+        <button id="endGameBtn" class="btn btn-primary" style="font-size: 18px; padding: 10px 20px; background-color: #6a8ba7;">
+            完成遊戲
+        </button>
+    </div>
+
+    <div class="overlay" id="gameModal" style= 'display:none'>
+        <div class="popup">
+            <h2>Time's up</h2>
+            <p>得分：</p><br>
+            <h5 class="average">100</h5>
+            <p>親愛的小朋友，你超棒的，你成功幫助了各個器官找回屬於自己的家!</p>
+            <button onclick='closeModal()'>回首頁</button>
+
+        </div>
+    </div>
+    <script>
+        // 打開視窗
+        function openModal() {
+            document.getElementById('gameModal').style.display = 'flex';
+        }
+
+        // 關閉視窗
+        function closeModal() {
+            document.getElementById('gameModal').style.display = 'none';
+            window.location.href = "/home/home.html"; 
+        }
+
+        // 模擬開始遊戲
+        function startGame() {
+            const timeLeft = 180; // 設定初始時間
+            localStorage.setItem("timeLeft", timeLeft); // 保存時間到 localStorage
+            window.location.href = "/game/game1-2.html"; // 跳轉到遊戲頁面
+            closeModal();
+        }
+    </script>
+
+    <script> 
+        let timeLeft = parseInt(localStorage.getItem("timeLeft")) || 180; // 從 localStorage 讀取時間
+        const timerDisplay = document.getElementById("timer");
+
+        // 格式化時間為 mm:ss
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            return `剩餘時間: ${minutes.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
+        }
+
+        // 更新時間並開始計時器
+        const countdown = setInterval(() => {
+            timeLeft--;
+            timerDisplay.textContent = formatTime(timeLeft);
+            localStorage.setItem("timeLeft", timeLeft); // 持續更新時間
+
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                localStorage.removeItem("timeLeft"); // 清除時間紀錄
+                //alert("時間到！遊戲結束。");
+                openModal();
+            }
+        }, 1000);
+
+        function endGame() {  
+            clearInterval(countdown);
+            localStorage.removeItem("timeLeft"); // 清除時間紀錄
+            //alert("遊戲結束！恭喜完成遊戲！");
+            openModal();
+        }
+
+        // 初始顯示時間
+        timerDisplay.textContent = formatTime(timeLeft);
+
+        const endGameBtn = document.getElementById("endGameBtn");
+        endGameBtn.addEventListener("click", () =>{
+            endGame();
+        });
+        
+    </script>
+    
+    <script>
+        const burgerMenu = document.querySelector('.bergerMenu');
+        const sidebar = document.getElementById('mySidebar');
+
+        burgerMenu.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        // 開關使用者選單的函式
+        function toggleUserMenu() {
+            // 獲取 id="myuser" 的元素
+            var userMenu = document.getElementById("myuser");
+            // 切換 'active' class，控制顯示或隱藏
+            userMenu.classList.toggle("active");
+        }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>
